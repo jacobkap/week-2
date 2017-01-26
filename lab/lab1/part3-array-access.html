@@ -69,15 +69,14 @@
       ext: 'png'
     }).addTo(map);
 
-    /* =====================
-
-    Start code
-
-    ===================== */
-
-    L.marker([0, 0]).addTo(map);
-    L.marker([0, 0]).addTo(map);
-    L.marker([0, 0]).addTo(map);
+   var restaurantData = [
+     [39.9539929, -75.2119342, "Evan's Pizza"],
+     [39.9567794, -75.1991013, "Han Dynasty"],
+     [39.9532203, -75.2124406, "Honest Tom's Taco Shop"]
+   ];
+   for (var i = 0; i < restaurantData.length; i++) {
+     L.marker([restaurantData[i][0], restaurantData[i][1]]).addTo(map).bindPopup(restaurantData[i][2]);
+   };
 
     /* =====================
 

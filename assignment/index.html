@@ -29,6 +29,16 @@
       	maxZoom: 20,
       	ext: 'png'
       }).addTo(map);
+
+
+    var healthCenters = healthCenters;
+
+      for (var i = 0; i < healthCenters.length; i++) {
+        L.marker([healthCenters[i][0], healthCenters[i][1]).addTo(map).bindPopup(healthCenters[i][4]));
+      };
+
+
+
     </script>
     <script>
       /* =====================
